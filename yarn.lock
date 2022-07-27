@@ -127,6 +127,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/client@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@prisma/client@npm:4.1.0"
+  dependencies:
+    "@prisma/engines-version": 4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8
+  peerDependencies:
+    prisma: "*"
+  peerDependenciesMeta:
+    prisma:
+      optional: true
+  checksum: bd722305284c633f9c1f8c92efb4db47ab8d47ce12384ed75b99880333f017a69f5ce65d546b306a0fe3a21e9d068e287ce96b4421c7b657e5b1c949673f8179
+  languageName: node
+  linkType: hard
+
+"@prisma/engines-version@npm:4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8":
+  version: 4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8
+  resolution: "@prisma/engines-version@npm:4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8"
+  checksum: 6c2e937663439589412f5b5765abbae6aeed0df10640a9fdd5a8d39b77981e95b5b5871ed865e50ef8e4c150511f455d7b3acbf44cd3cae4a67732489dc58fec
+  languageName: node
+  linkType: hard
+
+"@prisma/engines@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@prisma/engines@npm:4.1.0"
+  checksum: b549d20b18d224388f267d92e9a53e4570064c74eff02bb7f2259cefdf060785a65c49afb5d6f897a3ab907a50425b0dff83ed06018ce5d465f0583a9dc4b893
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -1709,6 +1737,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prisma@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "prisma@npm:4.1.0"
+  dependencies:
+    "@prisma/engines": 4.1.0
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: c566f03e8d0547c42fa8fe67f772c477dc68993654347434aac5317a2a1799470dedabdbc428a7d48375f8930e0fcd6c41e9a0d85686315ff7bfcdf3f73a9d56
+  languageName: node
+  linkType: hard
+
 "promise-inflight@npm:^1.0.1":
   version: 1.0.1
   resolution: "promise-inflight@npm:1.0.1"
@@ -1873,6 +1913,9 @@ __metadata:
 "server@workspace:packages/server":
   version: 0.0.0-use.local
   resolution: "server@workspace:packages/server"
+  dependencies:
+    "@prisma/client": ^4.1.0
+    prisma: ^4.1.0
   languageName: unknown
   linkType: soft
 

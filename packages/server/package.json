@@ -1,4 +1,10 @@
 {
   "name": "server",
-  "packageManager": "yarn@3.2.2"
+  "packageManager": "yarn@3.2.2",
+  "devDependencies": {
+    "prisma": "^4.1.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.1.0"
+  }
 }
