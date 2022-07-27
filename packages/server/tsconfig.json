@@ -1,0 +1,9 @@
+{
+  "extends": "../utils/tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["ESNext"]
+  },
+  "include": ["src/**/*.ts"],
+  "files": ["src/credentials/serviceAccountKey.json"]
+}
