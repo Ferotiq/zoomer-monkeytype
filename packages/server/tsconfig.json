@@ -5,6 +5,5 @@
     "module": "CommonJS",
     "lib": ["ESNext"]
   },
-  "include": ["src/**/*.ts"],
-  "files": ["src/credentials/serviceAccountKey.json"]
+  "include": ["src/**/*.ts"]
 }
