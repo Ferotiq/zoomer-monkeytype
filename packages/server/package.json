@@ -1,7 +1,11 @@
 {
   "name": "server",
   "packageManager": "yarn@3.2.2",
+  "main": "./dist/index.js",
   "scripts": {
+    "start": "node .",
+    "dev": "ts-node-dev ./src/index.ts",
+    "build": "tsc",
     "lint": "eslint \"src/**/*.{ts,json}\"",
     "lint-fix": "eslint --fix \"src/**/*.{ts,json}\"",
     "pretty": "prettier --check \"src/**/*.{ts,json}\"",
