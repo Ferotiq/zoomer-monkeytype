@@ -1,5 +1,11 @@
 {
   "name": "utils",
   "types": "src/index.d.ts",
+  "scripts": {
+    "lint": "eslint \"**/*.{ts,json}\"",
+    "lint-fix": "eslint --fix \"**/*.{ts,json}\"",
+    "pretty": "prettier --check \"**/*.{ts,json}\"",
+    "pretty-fix": "prettier --write \"**/*.{ts,json}\""
+  },
   "packageManager": "yarn@3.2.2"
 }

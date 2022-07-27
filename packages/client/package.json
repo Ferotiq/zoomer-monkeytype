@@ -5,7 +5,11 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint \"**/*.{ts,tsx,json}\"",
+    "lint-fix": "eslint --fix \"**/*.{ts,tsx,json}\"",
+    "pretty": "prettier --check \"**/*.{ts,tsx,css,scss,html,json}\"",
+    "pretty-fix": "prettier --write \"**/*.{ts,tsx,css,scss,html,json}\""
   },
   "dependencies": {
     "solid-js": "^1.4.8",
