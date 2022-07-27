@@ -4,11 +4,14 @@
   "compilerOptions": {
     "strict": true,
     "target": "ESNext",
+    "outDir": "./dist",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
     "newLine": "lf",
     "skipLibCheck": true
-  }
+  },
+  "exclude": ["node_modules"]
 }
