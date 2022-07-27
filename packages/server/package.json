@@ -1,6 +1,9 @@
 {
   "name": "server",
   "packageManager": "yarn@3.2.2",
+  "scripts": {
+    "prisma": "prisma"
+  },
   "devDependencies": {
     "prisma": "^4.1.0"
   },
