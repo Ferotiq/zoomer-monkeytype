@@ -1,4 +1,5 @@
 {
   "name": "util",
+  "types": "src/index.d.ts",
   "packageManager": "yarn@3.2.2"
 }
