@@ -10,6 +10,9 @@
   "license": "AGPL-3.0",
   "private": true,
   "scripts": {
+    "start": "yarn workspaces foreach -pvi run start",
+    "dev": "yarn workspaces foreach -pvi run dev",
+    "build": "yarn workspaces foreach -v run build",
     "lint": "yarn workspaces foreach -v run lint",
     "lint-fix": "yarn workspaces foreach -v run lint-fix",
     "pretty": "yarn workspaces foreach -v run pretty",
