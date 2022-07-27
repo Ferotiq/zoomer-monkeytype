@@ -1,7 +1,19 @@
 {
   "name": "client",
   "packageManager": "yarn@3.2.2",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
   "dependencies": {
+    "solid-js": "^1.4.8",
     "utils": "workspace:^"
+  },
+  "devDependencies": {
+    "sass": "^1.54.0",
+    "vite": "^3.0.3",
+    "vite-plugin-solid": "^2.3.0"
   }
 }
