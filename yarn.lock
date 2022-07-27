@@ -483,6 +483,8 @@ __metadata:
 "bot@workspace:packages/bot":
   version: 0.0.0-use.local
   resolution: "bot@workspace:packages/bot"
+  dependencies:
+    utils: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -600,6 +602,8 @@ __metadata:
 "client@workspace:packages/client":
   version: 0.0.0-use.local
   resolution: "client@workspace:packages/client"
+  dependencies:
+    utils: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -1916,6 +1920,7 @@ __metadata:
   dependencies:
     "@prisma/client": ^4.1.0
     prisma: ^4.1.0
+    utils: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -2280,9 +2285,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"util@workspace:packages/util":
+"utils@workspace:^, utils@workspace:packages/utils":
   version: 0.0.0-use.local
-  resolution: "util@workspace:packages/util"
+  resolution: "utils@workspace:packages/utils"
   languageName: unknown
   linkType: soft
 
