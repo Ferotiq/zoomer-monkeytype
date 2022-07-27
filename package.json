@@ -1,0 +1,13 @@
+{
+  "name": "zoomer-monkeytype",
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "Monkeytype but using all the new zoomer technologies",
+  "repository": "https://github.com/Ferotiq/zoomer-monkeytype.git",
+  "author": "Evan <evanrayweigel@outlook.com>",
+  "license": "AGPL-3.0",
+  "private": true,
+  "packageManager": "yarn@3.2.2"
+}
