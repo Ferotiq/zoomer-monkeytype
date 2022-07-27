@@ -1,0 +1,14 @@
+// Global TSConfig for Monkeytype
+
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "newLine": "lf",
+    "skipLibCheck": true
+  }
+}
