@@ -1,0 +1,11 @@
+node_modules
+dist
+packages/client/**/*.min.js
+packages/client/**/*.min.css
+packages/client/public/quotes/*
+packages/client/public/sound/*
+packages/client/public/css/balloon.css
+packages/client/public/**/_list.json
+packages/server/logs
+packages/server/coverage
+packages/server/globalConfig.json
