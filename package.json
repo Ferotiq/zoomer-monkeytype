@@ -18,10 +18,14 @@
     "pretty": "yarn workspaces foreach -v run pretty",
     "pretty-fix": "yarn workspaces foreach -v run pretty-fix"
   },
+  "dependencies": {
+    "superjson": "^1.9.1"
+  },
   "devDependencies": {
     "@types/node": "^18.6.1",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
+    "dotenv": "^16.0.1",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-json": "^3.1.0",

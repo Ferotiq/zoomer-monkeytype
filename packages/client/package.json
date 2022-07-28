@@ -12,6 +12,9 @@
     "pretty-fix": "prettier --write \"**/*.{ts,tsx,css,scss,html,json}\""
   },
   "dependencies": {
+    "@trpc/client": "^9.26.2",
+    "@trpc/server": "^9.26.2",
+    "server": "workspace:^",
     "solid-js": "^1.4.8",
     "utils": "workspace:^"
   },
