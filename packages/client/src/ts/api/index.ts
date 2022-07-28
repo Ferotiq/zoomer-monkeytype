@@ -4,10 +4,11 @@ import type { AppRouter } from "server";
 import type { inferHandlerInput } from "@trpc/server";
 import { createResource } from "solid-js";
 
-export const apiURL =
-  ["localhost", "127.0.0.1"].includes(window.location.hostname)
-    ? "http://localhost:3005"
-    : "https://api.monkeytype.com";
+export const apiURL = ["localhost", "127.0.0.1"].includes(
+  window.location.hostname
+)
+  ? "http://localhost:3005"
+  : "https://api.monkeytype.com";
 
 type AppQueries = AppRouter["_def"]["queries"];
 type AppQueryKeys = keyof AppQueries;
