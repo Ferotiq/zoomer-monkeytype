@@ -992,13 +992,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:^1.5.2":
-  version: 1.5.2
-  resolution: "async@npm:1.5.2"
-  checksum: fe5d6214d8f15bd51eee5ae8ec5079b228b86d2d595f47b16369dec2e11b3ff75a567bb5f70d12d79006665fbbb7ee0a7ec0e388524eefd454ecbe651c124ebd
-  languageName: node
-  linkType: hard
-
 "babel-plugin-jsx-dom-expressions@npm:^0.33.14":
   version: 0.33.14
   resolution: "babel-plugin-jsx-dom-expressions@npm:0.33.14"
@@ -1112,13 +1105,6 @@ __metadata:
   version: 1.1.2
   resolution: "buffer-from@npm:1.1.2"
   checksum: 0448524a562b37d4d7ed9efd91685a5b77a50672c556ea254ac9a6d30e3403a517d8981f10e565db24e8339413b43c97ca2951f10e399c6125a0d8911f5679bb
-  languageName: node
-  linkType: hard
-
-"builtin-modules@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "builtin-modules@npm:1.1.1"
-  checksum: 0fbf69ffe77fecf11c441b9a7d1e664bb8119a7d3004831d9bd6ce0eacfd5d121ed4b667172870b5f66ecfce4bd54f7c20060d21c339c29049a7a5dd2bb7bf8c
   languageName: node
   linkType: hard
 
@@ -1802,17 +1788,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-require-path-exists@npm:^1.1.9":
-  version: 1.1.9
-  resolution: "eslint-plugin-require-path-exists@npm:1.1.9"
-  dependencies:
-    builtin-modules: ^1.1.1
-    fs-plus: ^3.0.0
-    resolve: ^1.1.7
-  checksum: d431a87230f1ff45122f61b6a6b7d1d107795f585b4e710cba2151af332e11806bfcf1600740368c89e7c8523e1052137b56f2ea154be5c2c07900b51882181c
-  languageName: node
-  linkType: hard
-
 "eslint-scope@npm:^5.1.1":
   version: 5.1.1
   resolution: "eslint-scope@npm:5.1.1"
@@ -2119,18 +2094,6 @@ __metadata:
   dependencies:
     minipass: ^3.0.0
   checksum: 1b8d128dae2ac6cc94230cc5ead341ba3e0efaef82dab46a33d171c044caaa6ca001364178d42069b2809c35a1c3c35079a32107c770e9ffab3901b59af8c8b1
-  languageName: node
-  linkType: hard
-
-"fs-plus@npm:^3.0.0":
-  version: 3.1.1
-  resolution: "fs-plus@npm:3.1.1"
-  dependencies:
-    async: ^1.5.2
-    mkdirp: ^0.5.1
-    rimraf: ^2.5.2
-    underscore-plus: 1.x
-  checksum: 8fdcfbd0a2e1910fb6c36249c425199f7d151cd66a5d06807e6634dafaff5827766d7b781083a3cd2c776e13ae2503a6dbb930a78874ea595ca3802b3406e3be
   languageName: node
   linkType: hard
 
@@ -2843,17 +2806,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^0.5.1":
-  version: 0.5.6
-  resolution: "mkdirp@npm:0.5.6"
-  dependencies:
-    minimist: ^1.2.6
-  bin:
-    mkdirp: bin/cmd.js
-  checksum: 0c91b721bb12c3f9af4b77ebf73604baf350e64d80df91754dc509491ae93bf238581e59c7188360cec7cb62fc4100959245a42cfe01834efedc5e9d068376c2
-  languageName: node
-  linkType: hard
-
 "mkdirp@npm:^1.0.3, mkdirp@npm:^1.0.4":
   version: 1.0.4
   resolution: "mkdirp@npm:1.0.4"
@@ -3242,7 +3194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.0.0, resolve@npm:^1.1.7, resolve@npm:^1.22.1":
+"resolve@npm:^1.0.0, resolve@npm:^1.22.1":
   version: 1.22.1
   resolution: "resolve@npm:1.22.1"
   dependencies:
@@ -3255,7 +3207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.0.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.0.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
   version: 1.22.1
   resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"
   dependencies:
@@ -3282,7 +3234,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^2.5.2, rimraf@npm:^2.6.1":
+"rimraf@npm:^2.6.1":
   version: 2.7.1
   resolution: "rimraf@npm:2.7.1"
   dependencies:
@@ -3856,22 +3808,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"underscore-plus@npm:1.x":
-  version: 1.7.0
-  resolution: "underscore-plus@npm:1.7.0"
-  dependencies:
-    underscore: ^1.9.1
-  checksum: 84c2c9ace59058764b15a1ad553b465702abf7370ac1de41d90fdd5f67367202c705737676b5b3349f1fce1aabec5b81286cb6e9ec21a0bd733301325cf5f03e
-  languageName: node
-  linkType: hard
-
-"underscore@npm:^1.9.1":
-  version: 1.13.4
-  resolution: "underscore@npm:1.13.4"
-  checksum: 6b04f66cd454e8793a552dc49c71e24e5208a29b9d9c0af988a96948af79103399c36fb15db43f3629bfed152f8b1fe94f44e1249e9d196069c0fc7edfadb636
-  languageName: node
-  linkType: hard
-
 "unique-filename@npm:^1.1.1":
   version: 1.1.1
   resolution: "unique-filename@npm:1.1.1"
@@ -4127,7 +4063,6 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-json: ^3.1.0
     eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-require-path-exists: ^1.1.9
     prettier: ^2.7.1
     superjson: ^1.9.1
     ts-node-dev: ^2.0.0
