@@ -23,5 +23,5 @@ export const createContext = (
   };
 };
 
-export const createRouter = (): ReturnType<typeof trpc.router<Context>> =>
-  trpc.router<Context>();
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export const createRouter = () => trpc.router<Context>();
