@@ -1,8 +1,8 @@
 import { createTRPCClient } from "@trpc/client";
-import superjson from "superjson";
-import type { AppRouter } from "server";
 import type { inferHandlerInput } from "@trpc/server";
+import type { AppRouter } from "server";
 import { createResource } from "solid-js";
+import superjson from "superjson";
 
 export const apiURL = ["localhost", "127.0.0.1"].includes(
   window.location.hostname
