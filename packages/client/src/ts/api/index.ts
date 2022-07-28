@@ -5,7 +5,7 @@ import type { inferHandlerInput } from "@trpc/server";
 import { createResource } from "solid-js";
 
 export const apiURL =
-  window.location.hostname === "localhost"
+  ["localhost", "127.0.0.1"].includes(window.location.hostname)
     ? "http://localhost:3005"
     : "https://api.monkeytype.com";
 
