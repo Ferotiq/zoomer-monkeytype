@@ -1,5 +1,5 @@
-import { createRouter } from "./context";
 import { z } from "zod";
+import { createRouter } from "./context";
 
 export const exampleRouter = createRouter().query("hello", {
   input: z
@@ -7,9 +7,11 @@ export const exampleRouter = createRouter().query("hello", {
       text: z.string().nullish(),
     })
     .nullish(),
-  resolve({ input }) {
+  async resolve({ ctx, input }) {
+    const example = await ctx.prisma.example.create({ data: {} });
+
     return {
-      greeting: `Hello ${input?.text ?? "world"}`,
+      greeting: `Hello ${input?.text ?? example.id ?? "world"}!`,
     };
   },
 });
