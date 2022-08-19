@@ -19,7 +19,7 @@
     "pretty-fix": "yarn workspaces foreach -v run pretty-fix"
   },
   "dependencies": {
-    "@prisma/client": "^4.1.1",
+    "@prisma/client": "^4.2.1",
     "superjson": "^1.9.1"
   },
   "devDependencies": {
