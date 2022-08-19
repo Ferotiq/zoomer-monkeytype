@@ -7,11 +7,9 @@ export const exampleRouter = createRouter().query("hello", {
       text: z.string().nullish(),
     })
     .nullish(),
-  async resolve({ ctx, input }) {
-    const example = await ctx.prisma.example.create({ data: {} });
-
+  resolve({ input }) {
     return {
-      greeting: `Hello ${input?.text ?? example.id ?? "world"}!`,
+      greeting: `Hello ${input?.text ?? "world"}!`,
     };
   },
 });
