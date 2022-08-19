@@ -4,11 +4,10 @@ import type { AppRouter } from "server";
 import { createResource } from "solid-js";
 import superjson from "superjson";
 
-export const apiURL = ["localhost", "127.0.0.1"].includes(
-  window.location.hostname
-)
-  ? "http://localhost:3005"
-  : "https://api.monkeytype.com";
+export const apiURL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3005"
+    : "https://api.monkeytype.com";
 
 type AppQueries = AppRouter["_def"]["queries"];
 type AppQueryKeys = keyof AppQueries;

@@ -7,4 +7,8 @@ import "../styles/index.scss";
 // components
 import { App } from "./App";
 
-render(() => <App />, document.getElementById("root") as HTMLElement);
+if (window.location.hostname === "127.0.0.1") {
+  window.location.replace("http://localhost:3000/");
+} else {
+  render(() => <App />, document.getElementById("root") as HTMLElement);
+}
