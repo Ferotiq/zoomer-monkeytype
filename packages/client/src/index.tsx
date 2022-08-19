@@ -2,7 +2,7 @@
 import { render } from "solid-js/web";
 
 // styles
-import "../styles/index.scss";
+import "./styles/index.scss";
 
 // components
 import { App } from "./App";
