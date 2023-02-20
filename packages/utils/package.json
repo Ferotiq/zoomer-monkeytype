@@ -9,7 +9,7 @@
     "prisma": "prisma"
   },
   "devDependencies": {
-    "prisma": "^4.2.1"
+    "prisma": "^4.10.1"
   },
   "packageManager": "yarn@3.2.2"
 }

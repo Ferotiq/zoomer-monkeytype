@@ -1,6 +1,5 @@
 {
   "name": "bot",
-  "packageManager": "yarn@3.2.2",
   "main": "./dist/index.js",
   "scripts": {
     "start": "node .",
@@ -13,5 +12,6 @@
   },
   "dependencies": {
     "utils": "workspace:^"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }
