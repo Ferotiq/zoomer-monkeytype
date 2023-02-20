@@ -1,8 +1,8 @@
-import express from "express";
-import cors from "cors";
-import { appRouter } from "./router";
-import { createContext } from "./router/context";
 import * as trpcExpress from "@trpc/server/adapters/express";
+import cors from "cors";
+import express from "express";
+import { AppRouter, appRouter } from "./router";
+import { createContext } from "./router/context";
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.use(cors());
 
 app.use(
   "/trpc",
-  trpcExpress.createExpressMiddleware({
+  trpcExpress.createExpressMiddleware<AppRouter>({
     router: appRouter,
     createContext,
   })

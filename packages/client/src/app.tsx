@@ -1,8 +1,8 @@
-import type { Component } from "solid-js";
-import { createTRPCQuery } from "./api";
+import { Component, createResource } from "solid-js";
+import { client } from "./api";
 
 const App: Component = () => {
-  const [example] = createTRPCQuery("example.hello");
+  const [example] = createResource(() => client.hello.query({ text: "World" }));
 
   return <div>{example()?.greeting}</div>;
 };

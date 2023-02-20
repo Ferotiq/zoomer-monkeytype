@@ -1,18 +1,12 @@
-import type { PrismaClient } from "@prisma/client";
-import type { IncomingMessage, ServerResponse } from "http";
+import type { inferAsyncReturnType } from "@trpc/server";
 import type { NodeHTTPCreateContextFnOptions } from "@trpc/server/adapters/node-http";
-import * as trpc from "@trpc/server";
+import type { IncomingMessage, ServerResponse } from "http";
 import { prisma } from "../db/client";
 
-interface Context {
-  req?: IncomingMessage;
-  res?: ServerResponse;
-  prisma: PrismaClient;
-}
-
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const createContext = (
   options: NodeHTTPCreateContextFnOptions<IncomingMessage, ServerResponse>
-): Context => {
+) => {
   const req = options?.req;
   const res = options?.res;
 
@@ -23,5 +17,4 @@ export const createContext = (
   };
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const createRouter = () => trpc.router<Context>();
+export type Context = inferAsyncReturnType<typeof createContext>;
