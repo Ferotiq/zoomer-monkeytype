@@ -43,7 +43,14 @@
       // enable the rule specifically for TypeScript files
       "files": ["*.ts", "*.tsx"],
       "rules": {
-        "@typescript-eslint/explicit-function-return-type": ["error"],
+        "curly": ["error", "multi-line"],
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true,
+            "allowTypedFunctionExpressions": true
+          }
+        ],
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-empty-function": "error",
         "no-unused-vars": "off",

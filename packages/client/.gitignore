@@ -1,4 +1,0 @@
-# Firebase
-.firebaserc
-src/constants/firebase-config.ts
-src/constants/firebase-config-live.ts
