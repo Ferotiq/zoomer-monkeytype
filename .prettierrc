@@ -1,16 +1,16 @@
 {
-  "tabWidth": 2,
-  "useTabs": true,
-  "htmlWhitespaceSensitivity": "ignore",
-  "endOfLine": "lf",
-  "overrides": [
-    {
-      "files": [
-        "*.{ts,tsx}"
-      ],
-      "options": {
-        "parser": "typescript"
-      }
-    }
-  ]
+	"tabWidth": 2,
+	"useTabs": true,
+	"htmlWhitespaceSensitivity": "ignore",
+	"endOfLine": "lf",
+	"overrides": [
+		{
+			"files": [
+				"*.{ts,tsx}"
+			],
+			"options": {
+				"parser": "typescript"
+			}
+		}
+	]
 }
