@@ -1,15 +1,15 @@
 {
-  "name": "utils",
-  "types": "src/index.d.ts",
-  "scripts": {
-    "lint": "eslint \"**/*.{ts,json}\"",
-    "lint-fix": "eslint --fix \"**/*.{ts,json}\"",
-    "pretty": "prettier --check \"**/*.{ts,json}\"",
-    "pretty-fix": "prettier --write \"**/*.{ts,json}\"",
-    "prisma": "prisma"
-  },
-  "devDependencies": {
-    "prisma": "^4.10.1"
-  },
-  "packageManager": "yarn@3.2.2"
+	"name": "utils",
+	"types": "src/index.d.ts",
+	"scripts": {
+		"lint": "eslint \"**/*.{ts,json}\"",
+		"lint-fix": "eslint --fix \"**/*.{ts,json}\"",
+		"pretty": "prettier --check \"**/*.{ts,json}\"",
+		"pretty-fix": "prettier --write \"**/*.{ts,json}\"",
+		"prisma": "prisma"
+	},
+	"devDependencies": {
+		"prisma": "^4.10.1"
+	},
+	"packageManager": "yarn@3.2.2"
 }

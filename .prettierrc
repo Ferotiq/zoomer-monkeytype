@@ -1,6 +1,6 @@
 {
   "tabWidth": 2,
-  "useTabs": false,
+  "useTabs": true,
   "htmlWhitespaceSensitivity": "ignore",
   "endOfLine": "lf",
   "overrides": [

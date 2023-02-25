@@ -1,17 +1,17 @@
 {
-  "name": "bot",
-  "main": "./dist/index.js",
-  "scripts": {
-    "start": "node .",
-    "dev": "ts-node-dev ./src/index.ts",
-    "build": "tsc",
-    "lint": "eslint \"src/**/*.{ts,json}\"",
-    "lint-fix": "eslint --fix \"src/**/*.{ts,json}\"",
-    "pretty": "prettier --check \"src/**/*.{ts,json}\"",
-    "pretty-fix": "prettier --write \"src/**/*.{ts,json}\""
-  },
-  "dependencies": {
-    "utils": "workspace:^"
-  },
-  "packageManager": "yarn@3.4.1"
+	"name": "bot",
+	"main": "./dist/index.js",
+	"scripts": {
+		"start": "node .",
+		"dev": "ts-node-dev ./src/index.ts",
+		"build": "tsc",
+		"lint": "eslint \"src/**/*.{ts,json}\"",
+		"lint-fix": "eslint --fix \"src/**/*.{ts,json}\"",
+		"pretty": "prettier --check \"src/**/*.{ts,json}\"",
+		"pretty-fix": "prettier --write \"src/**/*.{ts,json}\""
+	},
+	"dependencies": {
+		"utils": "workspace:^"
+	},
+	"packageManager": "yarn@3.4.1"
 }

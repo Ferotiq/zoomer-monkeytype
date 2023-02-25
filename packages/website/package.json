@@ -1,28 +1,28 @@
 {
-  "name": "website",
-  "type": "module",
-  "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "start": "solid-start start",
-    "lint": "eslint \"**/*.{ts,json}\"",
-    "lint-fix": "eslint --fix \"**/*.{ts,json}\"",
-    "pretty": "prettier --check \"**/*.{ts,json}\"",
-    "pretty-fix": "prettier --write \"**/*.{ts,json}\""
-  },
-  "devDependencies": {
-    "solid-start-node": "^0.2.19",
-    "typescript": "^4.9.4",
-    "vite": "^3.2.5"
-  },
-  "dependencies": {
-    "@prisma/client": "^4.9.0",
-    "@solidjs/meta": "^0.28.2",
-    "@solidjs/router": "^0.7.0",
-    "solid-js": "^1.6.11",
-    "solid-start": "^0.2.21",
-    "undici": "^5.15.1",
-    "utils": "workspace:^"
-  },
-  "packageManager": "yarn@3.4.1"
+	"name": "website",
+	"type": "module",
+	"scripts": {
+		"dev": "solid-start dev",
+		"build": "solid-start build",
+		"start": "solid-start start",
+		"lint": "eslint \"**/*.{ts,json}\"",
+		"lint-fix": "eslint --fix \"**/*.{ts,json}\"",
+		"pretty": "prettier --check \"**/*.{ts,json}\"",
+		"pretty-fix": "prettier --write \"**/*.{ts,json}\""
+	},
+	"devDependencies": {
+		"solid-start-node": "^0.2.19",
+		"typescript": "^4.9.4",
+		"vite": "^3.2.5"
+	},
+	"dependencies": {
+		"@prisma/client": "^4.9.0",
+		"@solidjs/meta": "^0.28.2",
+		"@solidjs/router": "^0.7.0",
+		"solid-js": "^1.6.11",
+		"solid-start": "^0.2.21",
+		"undici": "^5.15.1",
+		"utils": "workspace:^"
+	},
+	"packageManager": "yarn@3.4.1"
 }

@@ -4,13 +4,13 @@ import { createServerData$, redirect } from "solid-start/server";
 import { getUser } from "./session";
 
 export const useUser = (): Resource<User | undefined> =>
-  createServerData$(async (_, { request }) => {
-    const db = new PrismaClient();
-    const user = await getUser(db, request);
+	createServerData$(async (_, { request }) => {
+		const db = new PrismaClient();
+		const user = await getUser(db, request);
 
-    if (!user) {
-      throw redirect("/login");
-    }
+		if (!user) {
+			throw redirect("/login");
+		}
 
-    return user;
-  });
+		return user;
+	});

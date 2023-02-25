@@ -1,39 +1,40 @@
 {
-  "name": "zoomer-monkeytype",
-  "version": "0.0.0",
-  "workspaces": [
-    "packages/*"
-  ],
-  "description": "Monkeytype but using all the new zoomer technologies",
-  "repository": "https://github.com/Ferotiq/zoomer-monkeytype.git",
-  "author": "Evan <evanrayweigel@outlook.com>",
-  "license": "AGPL-3.0",
-  "private": true,
-  "scripts": {
-    "start": "yarn workspaces foreach -pvi run start",
-    "dev": "yarn workspaces foreach -pvi run dev",
-    "build": "yarn workspaces foreach -v run build",
-    "lint": "yarn workspaces foreach -v run lint",
-    "lint-fix": "yarn workspaces foreach -v run lint-fix",
-    "pretty": "yarn workspaces foreach -v run pretty",
-    "pretty-fix": "yarn workspaces foreach -v run pretty-fix"
-  },
-  "dependencies": {
-    "@prisma/client": "^4.10.1",
-    "superjson": "^1.12.2"
-  },
-  "devDependencies": {
-    "@types/node": "^18.14.0",
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "@typescript-eslint/parser": "^5.52.0",
-    "dotenv": "^16.0.3",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.4",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.9.5"
-  },
-  "packageManager": "yarn@3.4.1"
+	"name": "zoomer-monkeytype",
+	"version": "0.0.0",
+	"workspaces": [
+		"packages/*"
+	],
+	"description": "Monkeytype but using all the new zoomer technologies",
+	"repository": "https://github.com/Ferotiq/zoomer-monkeytype.git",
+	"author": "Evan <evanrayweigel@outlook.com>",
+	"license": "AGPL-3.0",
+	"private": true,
+	"scripts": {
+		"start": "yarn workspaces foreach -pvi run start",
+		"dev": "yarn workspaces foreach -pvi run dev",
+		"build": "yarn workspaces foreach -v run build",
+		"lint": "yarn workspaces foreach -v run lint",
+		"lint-fix": "yarn workspaces foreach -v run lint-fix",
+		"pretty": "yarn workspaces foreach -v run pretty",
+		"pretty-fix": "yarn workspaces foreach -v run pretty-fix"
+	},
+	"dependencies": {
+		"@prisma/client": "^4.10.1",
+		"superjson": "^1.12.2"
+	},
+	"devDependencies": {
+		"@types/node": "^18.14.0",
+		"@typescript-eslint/eslint-plugin": "^5.52.0",
+		"@typescript-eslint/parser": "^5.52.0",
+		"dotenv": "^16.0.3",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-solid": "^0.10.0",
+		"prettier": "^2.8.4",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^4.9.5"
+	},
+	"packageManager": "yarn@3.4.1"
 }
