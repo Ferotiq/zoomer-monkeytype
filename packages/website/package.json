@@ -12,17 +12,17 @@
 	},
 	"devDependencies": {
 		"sass": "^1.58.3",
-		"solid-start-node": "^0.2.19",
-		"typescript": "^4.9.4",
-		"vite": "^3.2.5"
+		"solid-start-node": "^0.2.22",
+		"typescript": "^4.9.5",
+		"vite": "^4.1.4"
 	},
 	"dependencies": {
-		"@prisma/client": "^4.9.0",
+		"@prisma/client": "^4.10.1",
 		"@solidjs/meta": "^0.28.2",
 		"@solidjs/router": "^0.7.0",
 		"solid-js": "^1.6.11",
-		"solid-start": "^0.2.21",
-		"undici": "^5.15.1",
+		"solid-start": "^0.2.22",
+		"undici": "^5.20.0",
 		"utils": "workspace:^"
 	},
 	"packageManager": "yarn@3.4.1"
