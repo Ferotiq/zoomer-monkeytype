@@ -12,7 +12,7 @@ import {
 	Scripts,
 	Title,
 } from "solid-start";
-import "./root.css";
+import "./root.scss";
 
 export default function Root(): JSX.Element {
 	return (
