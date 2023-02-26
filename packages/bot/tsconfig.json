@@ -2,8 +2,9 @@
 	"extends": "../utils/tsconfig.json",
 	"compilerOptions": {
 		"outDir": "./dist",
-		"module": "CommonJS",
-		"lib": ["ESNext"]
+		"module": "ESNext",
+		"lib": ["ESNext"],
+		"sourceMap": true
 	},
 	"include": ["src/**/*.ts"]
 }
