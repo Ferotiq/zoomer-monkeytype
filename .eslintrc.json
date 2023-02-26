@@ -41,7 +41,6 @@
 	},
 	"overrides": [
 		{
-			// enable the rule specifically for TypeScript files
 			"files": ["*.ts", "*.tsx"],
 			"rules": {
 				"curly": ["error", "multi-line"],
