@@ -62,6 +62,13 @@
 				"@typescript-eslint/no-var-requires": "error",
 				"@typescript-eslint/no-this-alias": "off"
 			}
+		},
+		{
+			"files": ["*.tsx"],
+			"rules": {
+				"solid/prefer-classlist": "error",
+				"solid/prefer-show": "error"
+			}
 		}
 	]
 }
