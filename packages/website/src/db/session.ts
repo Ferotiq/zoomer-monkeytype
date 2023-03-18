@@ -3,30 +3,32 @@ import { redirect } from "solid-start/server";
 import { createCookieSessionStorage } from "solid-start/session";
 import { Session } from "solid-start/session/sessions";
 import { prisma } from "~/db";
-type LoginForm = {
+
+interface LoginFormData {
 	username: string;
 	password: string;
-};
+}
 
-export function register({
-	username,
-	password,
-}: LoginForm): Promise<User | null> {
+export function register(loginFormData: LoginFormData): Promise<User | null> {
+	const { username, password } = loginFormData;
+
 	return prisma.user.create({
-		data: { username: username, password },
+		data: { username, password },
 	});
 }
 
 export async function login({
 	username,
 	password,
-}: LoginForm): Promise<User | null> {
+}: LoginFormData): Promise<User | null> {
 	const user = await prisma.user.findUnique({ where: { username } });
 	if (user === null) {
 		return null;
 	}
+
 	const isCorrectPassword = password === user.password;
 	if (!isCorrectPassword) return null;
+
 	return user;
 }
 
@@ -52,10 +54,12 @@ export function getUserSession(request: Request): Promise<Session> {
 
 export async function getUserId(request: Request): Promise<string | null> {
 	const session = await getUserSession(request);
+
 	const userId = session.get("userId");
 	if (typeof userId !== "string") {
 		return null;
 	}
+
 	return userId;
 }
 
@@ -64,11 +68,13 @@ export async function requireUserId(
 	redirectTo: string = new URL(request.url).pathname
 ): Promise<string> {
 	const session = await getUserSession(request);
+
 	const userId = session.get("userId");
 	if (typeof userId !== "string") {
 		const searchParams = new URLSearchParams([["redirectTo", redirectTo]]);
 		throw redirect(`/login?${searchParams}`);
 	}
+
 	return userId;
 }
 
@@ -88,11 +94,13 @@ export async function getUser(request: Request): Promise<User | null> {
 
 export async function logout(request: Request): Promise<Response> {
 	const session = await storage.getSession(request.headers.get("Cookie"));
-	return redirect("/login", {
+
+	const response = redirect("/login", {
 		headers: {
 			"Set-Cookie": await storage.destroySession(session),
 		},
 	});
+	return response;
 }
 
 export async function createUserSession(
@@ -101,9 +109,11 @@ export async function createUserSession(
 ): Promise<Response> {
 	const session = await storage.getSession();
 	session.set("userId", userId);
-	return redirect(redirectTo, {
+
+	const response = redirect(redirectTo, {
 		headers: {
 			"Set-Cookie": await storage.commitSession(session),
 		},
 	});
+	return response;
 }
