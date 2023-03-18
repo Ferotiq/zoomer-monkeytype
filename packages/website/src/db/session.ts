@@ -1,7 +1,7 @@
-import { User } from "@prisma/client";
+import type { User } from "@prisma/client";
 import { redirect } from "solid-start/server";
 import { createCookieSessionStorage } from "solid-start/session";
-import { Session } from "solid-start/session/sessions";
+import type { Session } from "solid-start/session/sessions";
 import { prisma } from "~/db";
 
 interface LoginFormData {
