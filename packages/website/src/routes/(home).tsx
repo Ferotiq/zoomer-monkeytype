@@ -1,5 +1,5 @@
-import { User } from "@prisma/client";
-import { Component, Resource } from "solid-js";
+import type { User } from "@prisma/client";
+import type { Component, Resource } from "solid-js";
 import { refetchRouteData, useRouteData } from "solid-start";
 import { createServerAction$ } from "solid-start/server";
 import { logout } from "~/db/session";

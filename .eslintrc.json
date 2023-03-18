@@ -65,6 +65,7 @@
 						"allowNullableObject": false
 					}
 				],
+				"@typescript-eslint/no-import-type-side-effects": "error",
 				"solid/prefer-classlist": "error",
 				"solid/prefer-show": "error"
 			}

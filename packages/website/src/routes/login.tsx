@@ -1,4 +1,4 @@
-import { Component, Resource, Show } from "solid-js";
+import { Show, type Component, type Resource } from "solid-js";
 import { useParams, useRouteData } from "solid-start";
 import { FormError } from "solid-start/data";
 import {
@@ -23,7 +23,7 @@ function validatePassword(password: unknown): string | undefined {
 
 export function routeData(): Resource<object | undefined> {
 	return createServerData$(async (_, { request }) => {
-		if (await getUser(prisma, request)) {
+		if ((await getUser(request)) != null) {
 			throw redirect("/");
 		}
 		return {};
@@ -38,7 +38,7 @@ const Login: Component = () => {
 		const loginType = form.get("loginType");
 		const username = form.get("username");
 		const password = form.get("password");
-		const redirectTo = form.get("redirectTo") || "/";
+		const redirectTo = form.get("redirectTo") ?? "/";
 		if (
 			typeof loginType !== "string" ||
 			typeof username !== "string" ||
@@ -60,7 +60,7 @@ const Login: Component = () => {
 		switch (loginType) {
 			case "login": {
 				const user = await login({ username, password });
-				if (!user) {
+				if (user == null) {
 					throw new FormError(`Username/Password combination is incorrect`, {
 						fields,
 					});
@@ -71,13 +71,13 @@ const Login: Component = () => {
 				const userExists = await prisma.user.findUnique({
 					where: { username },
 				});
-				if (userExists) {
+				if (userExists != null) {
 					throw new FormError(`User with username ${username} already exists`, {
 						fields,
 					});
 				}
 				const user = await register({ username, password });
-				if (!user) {
+				if (user == null) {
 					throw new FormError(
 						`Something went wrong trying to create a new user.`,
 						{
@@ -131,7 +131,7 @@ const Login: Component = () => {
 						{loggingIn.error.message}
 					</p>
 				</Show>
-				<button type="submit">{data() ? "Login" : ""}</button>
+				<button type="submit">{data() != null ? "Login" : ""}</button>
 			</Form>
 		</main>
 	);

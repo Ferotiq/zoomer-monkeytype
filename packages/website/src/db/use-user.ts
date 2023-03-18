@@ -1,5 +1,5 @@
 import type { User } from "@prisma/client";
-import { Resource } from "solid-js";
+import type { Resource } from "solid-js";
 import { createServerData$, redirect } from "solid-start/server";
 import { getUser } from "./session";
 
