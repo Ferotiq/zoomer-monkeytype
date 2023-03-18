@@ -11,18 +11,18 @@
 		"pretty-fix": "prettier --write \"**/*.{ts,json}\""
 	},
 	"devDependencies": {
-		"sass": "^1.58.3",
-		"solid-start-node": "^0.2.22",
-		"typescript": "^4.9.5",
-		"vite": "^4.1.4"
+		"sass": "^1.59.3",
+		"solid-start-node": "^0.2.23",
+		"typescript": "^5.0.2",
+		"vite": "^4.2.0"
 	},
 	"dependencies": {
-		"@prisma/client": "^4.10.1",
+		"@prisma/client": "^4.11.0",
 		"@solidjs/meta": "^0.28.2",
-		"@solidjs/router": "^0.7.0",
-		"solid-js": "^1.6.11",
-		"solid-start": "^0.2.22",
-		"undici": "^5.20.0",
+		"@solidjs/router": "^0.8.0",
+		"solid-js": "^1.6.15",
+		"solid-start": "^0.2.23",
+		"undici": "^5.21.0",
 		"utils": "workspace:^"
 	}
 }
