@@ -1,8 +1,8 @@
-import { PrismaClient, User } from "@prisma/client";
+import { User } from "@prisma/client";
 import { redirect } from "solid-start/server";
 import { createCookieSessionStorage } from "solid-start/session";
 import { Session } from "solid-start/session/sessions";
-import { db } from ".";
+import { prisma } from "~/db";
 type LoginForm = {
 	username: string;
 	password: string;
@@ -12,7 +12,7 @@ export function register({
 	username,
 	password,
 }: LoginForm): Promise<User | null> {
-	return db.user.create({
+	return prisma.user.create({
 		data: { username: username, password },
 	});
 }
@@ -21,8 +21,8 @@ export async function login({
 	username,
 	password,
 }: LoginForm): Promise<User | null> {
-	const user = await db.user.findUnique({ where: { username } });
-	if (!user) {
+	const user = await prisma.user.findUnique({ where: { username } });
+	if (user === null) {
 		return null;
 	}
 	const isCorrectPassword = password === user.password;
@@ -53,7 +53,7 @@ export function getUserSession(request: Request): Promise<Session> {
 export async function getUserId(request: Request): Promise<string | null> {
 	const session = await getUserSession(request);
 	const userId = session.get("userId");
-	if (!userId || typeof userId !== "string") {
+	if (typeof userId !== "string") {
 		return null;
 	}
 	return userId;
@@ -65,24 +65,21 @@ export async function requireUserId(
 ): Promise<string> {
 	const session = await getUserSession(request);
 	const userId = session.get("userId");
-	if (!userId || typeof userId !== "string") {
+	if (typeof userId !== "string") {
 		const searchParams = new URLSearchParams([["redirectTo", redirectTo]]);
 		throw redirect(`/login?${searchParams}`);
 	}
 	return userId;
 }
 
-export async function getUser(
-	db: PrismaClient,
-	request: Request
-): Promise<User | null> {
+export async function getUser(request: Request): Promise<User | null> {
 	const userId = await getUserId(request);
 	if (typeof userId !== "string") {
 		return null;
 	}
 
 	try {
-		const user = await db.user.findUnique({ where: { id: userId } });
+		const user = await prisma.user.findUnique({ where: { id: userId } });
 		return user;
 	} catch {
 		throw logout(request);

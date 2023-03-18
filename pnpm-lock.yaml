@@ -9,7 +9,6 @@ importers:
       '@types/node': ^18.14.1
       '@typescript-eslint/eslint-plugin': ^5.53.0
       '@typescript-eslint/parser': ^5.53.0
-      client: link:.prisma/client
       dotenv: ^16.0.3
       eslint: ^8.34.0
       eslint-config-prettier: ^8.6.0
@@ -22,7 +21,6 @@ importers:
     dependencies:
       .prisma: link:prisma/.prisma
       '@prisma/client': 4.11.0_prisma@4.11.0
-      client: link:.prisma/client
     devDependencies:
       '@types/node': 18.15.3
       '@typescript-eslint/eslint-plugin': 5.55.0_342y7v4tc7ytrrysmit6jo4wri

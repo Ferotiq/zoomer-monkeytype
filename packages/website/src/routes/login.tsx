@@ -6,7 +6,7 @@ import {
 	createServerData$,
 	redirect,
 } from "solid-start/server";
-import { db } from "~/db";
+import { prisma } from "~/db";
 import { createUserSession, getUser, login, register } from "~/db/session";
 
 function validateUsername(username: unknown): string | undefined {
@@ -23,7 +23,7 @@ function validatePassword(password: unknown): string | undefined {
 
 export function routeData(): Resource<object | undefined> {
 	return createServerData$(async (_, { request }) => {
-		if (await getUser(db, request)) {
+		if (await getUser(prisma, request)) {
 			throw redirect("/");
 		}
 		return {};
@@ -68,7 +68,9 @@ const Login: Component = () => {
 				return createUserSession(`${user.id}`, redirectTo);
 			}
 			case "register": {
-				const userExists = await db.user.findUnique({ where: { username } });
+				const userExists = await prisma.user.findUnique({
+					where: { username },
+				});
 				if (userExists) {
 					throw new FormError(`User with username ${username} already exists`, {
 						fields,

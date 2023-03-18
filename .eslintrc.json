@@ -20,7 +20,8 @@
 	"plugins": ["json", "@typescript-eslint", "prettier", "solid"],
 	"parserOptions": {
 		"ecmaVersion": "latest",
-		"sourceType": "module"
+		"sourceType": "module",
+		"project": "**/tsconfig.json"
 	},
 	"rules": {
 		"json/*": ["error"],
@@ -34,16 +35,12 @@
 		],
 		"semi": ["error", "always"],
 		"no-empty": ["error", { "allowEmptyCatch": true }],
-		"no-var": 2,
-		"@typescript-eslint/no-empty-function": "off",
-		"@typescript-eslint/no-unused-vars": "off",
-		"@typescript-eslint/no-var-requires": "off"
+		"no-var": 2
 	},
 	"overrides": [
 		{
 			"files": ["*.ts", "*.tsx"],
 			"rules": {
-				"curly": ["error", "multi-line"],
 				"@typescript-eslint/explicit-function-return-type": [
 					"error",
 					{
@@ -51,7 +48,7 @@
 						"allowTypedFunctionExpressions": true
 					}
 				],
-				"@typescript-eslint/ban-ts-comment": "off",
+				"@typescript-eslint/ban-ts-comment": "error",
 				"@typescript-eslint/no-empty-function": "error",
 				"no-unused-vars": "off",
 				"@typescript-eslint/no-unused-vars": [
@@ -59,12 +56,15 @@
 					{ "argsIgnorePattern": "^(_|e|event)", "varsIgnorePattern": "^_" }
 				],
 				"@typescript-eslint/no-var-requires": "error",
-				"@typescript-eslint/no-this-alias": "off"
-			}
-		},
-		{
-			"files": ["*.tsx"],
-			"rules": {
+				"@typescript-eslint/no-this-alias": "off",
+				"@typescript-eslint/strict-boolean-expressions": [
+					"error",
+					{
+						"allowString": false,
+						"allowNumber": false,
+						"allowNullableObject": false
+					}
+				],
 				"solid/prefer-classlist": "error",
 				"solid/prefer-show": "error"
 			}
