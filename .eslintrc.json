@@ -1,13 +1,8 @@
 {
 	"env": {
 		"browser": true,
-		"es2022": true,
+		"es6": true,
 		"node": true
-	},
-	"globals": {
-		"html2canvas": "readonly",
-		"ClipboardItem": "readonly",
-		"grecaptcha": "readonly"
 	},
 	"extends": [
 		"eslint:recommended",
