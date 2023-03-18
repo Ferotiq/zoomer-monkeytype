@@ -1,22 +1,19 @@
 {
 	"name": "zoomer-monkeytype",
 	"version": "0.0.0",
-	"workspaces": [
-		"packages/*"
-	],
 	"description": "Monkeytype but using all the new zoomer technologies",
 	"repository": "https://github.com/Ferotiq/zoomer-monkeytype.git",
 	"author": "Evan <evanrayweigel@outlook.com>",
 	"license": "AGPL-3.0",
 	"private": true,
 	"scripts": {
-		"start": "yarn workspaces foreach -pvi run start",
-		"dev": "yarn workspaces foreach -pvi run dev",
-		"build": "yarn workspaces foreach -v run build",
-		"lint": "yarn workspaces foreach -v run lint",
-		"lint-fix": "yarn workspaces foreach -v run lint-fix",
-		"pretty": "yarn workspaces foreach -v run pretty",
-		"pretty-fix": "yarn workspaces foreach -v run pretty-fix"
+		"start": "pnpm run -r --parallel start",
+		"dev": "pnpm run -r --parallel dev",
+		"build": "pnpm run -r build",
+		"lint": "pnpm run -r lint",
+		"lint-fix": "pnpm run -r lint-fix",
+		"pretty": "pnpm run -r pretty",
+		"pretty-fix": "pnpm run -r pretty-fix"
 	},
 	"dependencies": {
 		"@prisma/client": "^4.10.1"
@@ -33,6 +30,5 @@
 		"eslint-plugin-solid": "^0.10.0",
 		"prettier": "^2.8.4",
 		"typescript": "^4.9.5"
-	},
-	"packageManager": "yarn@3.4.1"
+	}
 }
