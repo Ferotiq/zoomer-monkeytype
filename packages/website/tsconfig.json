@@ -1,14 +1,8 @@
 {
+	"extends": "../utils/tsconfig.json",
 	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
-		"target": "ESNext",
-		"module": "ESNext",
-		"moduleResolution": "node",
-		"verbatimModuleSyntax": true,
 		"jsxImportSource": "solid-js",
 		"jsx": "preserve",
-		"strict": true,
 		"types": ["solid-start/env"],
 		"baseUrl": "./",
 		"paths": {
