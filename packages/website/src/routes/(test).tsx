@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import styles from "./home.module.scss";
+import styles from "./test.module.scss";
 
 // export function routeData(): Resource<User | undefined> {
 // 	return useUser();
