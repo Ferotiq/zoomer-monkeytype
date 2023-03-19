@@ -5,7 +5,7 @@ import styles from "./test.module.scss";
 // 	return useUser();
 // }
 
-const Home: Component = () => {
+const Test: Component = () => {
 	// const user = useRouteData<typeof routeData>();
 	// const [, { Form }] = createServerAction$((f: FormData, { request }) =>
 	// 	logout(request)
@@ -26,4 +26,4 @@ const Home: Component = () => {
 	);
 };
 
-export default Home;
+export default Test;
