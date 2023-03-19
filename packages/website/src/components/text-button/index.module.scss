@@ -1,0 +1,65 @@
+.text-button {
+	color: var(--sub-color);
+	cursor: pointer;
+	transition: background 0.125s, color 0.125s;
+	padding: 0.5em;
+	border-radius: var(--roundness);
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	align-content: center;
+	height: min-content;
+	height: -moz-min-content;
+	line-height: 1.25em;
+	appearance: none;
+	border: none;
+	font-family: inherit;
+	font-size: 1em;
+	width: max-content;
+	width: -moz-max-content;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 0.25em;
+	text-decoration: none;
+
+	.fas,
+	.far {
+		display: grid;
+		place-content: center center;
+	}
+
+	&.active {
+		color: var(--main-color);
+		&:hover {
+			color: var(--text-color);
+		}
+		&:active {
+			color: var(--sub-color);
+		}
+	}
+
+	&.disabled {
+		opacity: 0.33;
+		cursor: default;
+		pointer-events: none;
+		&:hover {
+			background: var(--text-color);
+			outline: none;
+		}
+		&:active {
+			background: var(--sub-color);
+			color: var(--bg-color);
+		}
+	}
+
+	&:hover {
+		color: var(--text-color);
+	}
+	&:focus {
+		color: var(--text-color);
+		outline: none;
+	}
+	&:active {
+		color: var(--sub-color);
+	}
+}

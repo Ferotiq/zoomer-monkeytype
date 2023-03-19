@@ -6,6 +6,7 @@ import {
 	createServerData$,
 	redirect,
 } from "solid-start/server";
+import { Page } from "~/components/page";
 import { prisma } from "~/db";
 import { createUserSession, getUser, login, register } from "~/db/session";
 import styles from "./login.module.scss";
@@ -95,70 +96,72 @@ const Login: Component = () => {
 	});
 
 	return (
-		<main class={styles.page}>
-			<h1 class={styles.heading}>Login</h1>
-			<Form class={styles.form}>
-				<input
-					class={styles.input}
-					type="hidden"
-					name="redirectTo"
-					value={params.redirectTo ?? "/"}
-				/>
-				<fieldset class={styles["login-type"]}>
-					<legend>Login or Register?</legend>
-					<label>
-						<input
-							class={styles.input}
-							type="radio"
-							name="loginType"
-							value="login"
-							checked={true}
-						/>{" "}
-						Login
-					</label>
-					<label>
-						<input
-							class={styles.input}
-							type="radio"
-							name="loginType"
-							value="register"
-						/>{" "}
-						Register
-					</label>
-				</fieldset>
-				<div>
-					<label for="username-input">Username</label>
-					<input class={styles.input} name="username" placeholder="kody" />
-				</div>
-				<Show when={loggingIn.error?.fieldErrors?.username}>
-					<p class={styles.alert} role="alert">
-						{loggingIn.error.fieldErrors.username}
-					</p>
-				</Show>
-				<div>
-					<label for="password-input">Password</label>
+		<Page>
+			<main class={styles.page}>
+				<h1 class={styles.heading}>Login</h1>
+				<Form class={styles.form}>
 					<input
 						class={styles.input}
-						name="password"
-						type="password"
-						placeholder="twixrox"
+						type="hidden"
+						name="redirectTo"
+						value={params.redirectTo ?? "/"}
 					/>
-				</div>
-				<Show when={loggingIn.error?.fieldErrors?.password}>
-					<p class={styles.alert} role="alert">
-						{loggingIn.error.fieldErrors.password}
-					</p>
-				</Show>
-				<Show when={loggingIn.error}>
-					<p class={styles.alert} role="alert" id="error-message">
-						{loggingIn.error.message}
-					</p>
-				</Show>
-				<button class={styles.submit} type="submit">
-					{data() !== null ? "Login" : ""}
-				</button>
-			</Form>
-		</main>
+					<fieldset class={styles["login-type"]}>
+						<legend>Login or Register?</legend>
+						<label>
+							<input
+								class={styles.input}
+								type="radio"
+								name="loginType"
+								value="login"
+								checked={true}
+							/>{" "}
+							Login
+						</label>
+						<label>
+							<input
+								class={styles.input}
+								type="radio"
+								name="loginType"
+								value="register"
+							/>{" "}
+							Register
+						</label>
+					</fieldset>
+					<div>
+						<label for="username-input">Username</label>
+						<input class={styles.input} name="username" placeholder="kody" />
+					</div>
+					<Show when={loggingIn.error?.fieldErrors?.username}>
+						<p class={styles.alert} role="alert">
+							{loggingIn.error.fieldErrors.username}
+						</p>
+					</Show>
+					<div>
+						<label for="password-input">Password</label>
+						<input
+							class={styles.input}
+							name="password"
+							type="password"
+							placeholder="twixrox"
+						/>
+					</div>
+					<Show when={loggingIn.error?.fieldErrors?.password}>
+						<p class={styles.alert} role="alert">
+							{loggingIn.error.fieldErrors.password}
+						</p>
+					</Show>
+					<Show when={loggingIn.error}>
+						<p class={styles.alert} role="alert" id="error-message">
+							{loggingIn.error.message}
+						</p>
+					</Show>
+					<button class={styles.submit} type="submit">
+						{data() !== null ? "Login" : ""}
+					</button>
+				</Form>
+			</main>
+		</Page>
 	);
 };
 

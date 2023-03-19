@@ -1,0 +1,146 @@
+.top {
+	grid-template-areas: "logo menu";
+	line-height: 2.3rem;
+	font-size: 2.3rem;
+	/* text-align: center; */
+	// transition: 0.25s;
+	padding: 0 5px;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: auto 1fr;
+	z-index: 2;
+	align-items: center;
+	gap: 0.5rem;
+	user-select: none;
+
+	.logo {
+		// margin-bottom: 0.6rem;
+		cursor: pointer;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 0.5rem;
+
+		.icon {
+			width: 2.5rem;
+			display: grid;
+			align-items: center;
+			background-color: transparent;
+			// margin-bottom: 0.15rem;
+			svg path {
+				transition: 0.25s;
+				fill: var(--main-color);
+			}
+		}
+		.text {
+			.super {
+				position: absolute;
+				left: 0.25rem;
+				top: -0.1rem;
+				font-size: 0.65rem;
+				line-height: 0.65rem;
+				color: var(--sub-color);
+				transition: color 0.25s, opacity 0.25s;
+			}
+			position: relative;
+			font-size: 2rem;
+			font-family: "Lexend Deca";
+			transition: color 0.25s;
+			font-weight: unset;
+			margin-block-start: unset;
+			margin-block-end: unset;
+			margin-top: -0.2em;
+		}
+		white-space: nowrap;
+		user-select: none;
+
+		.bottom {
+			margin-left: -0.15rem;
+			color: var(--main-color);
+			transition: 0.25s;
+			cursor: pointer;
+		}
+	}
+
+	.config {
+		grid-area: config;
+		transition: 0.125s;
+		.mobileConfig {
+			display: none;
+			.textButton {
+				margin-right: -1rem;
+				padding: 0.5rem 1rem;
+				font-size: 2rem;
+			}
+		}
+
+		.desktopConfig {
+			justify-self: right;
+			display: grid;
+			// grid-auto-flow: row;
+			grid-template-rows: 0.7rem 0.7rem 0.7rem;
+			grid-gap: 0.2rem;
+			// width: min-content;
+			// width: -moz-min-content;
+			// transition: 0.25s;
+			/*   margin-bottom: 0.1rem; */
+			justify-items: self-end;
+
+			.group {
+				// transition: 0.25s;
+
+				.title {
+					color: var(--sub-color);
+					font-size: 0.5rem;
+					line-height: 0.5rem;
+					margin-bottom: 0.15rem;
+				}
+
+				.buttons {
+					display: flex;
+					.textButton {
+						font-size: 0.7rem;
+						line-height: 0.7rem;
+						padding: 0px 0.15rem;
+					}
+				}
+				&.disabled {
+					pointer-events: none;
+					opacity: 0.25;
+				}
+			}
+
+			.punctuationMode {
+				margin-bottom: -0.1rem;
+			}
+
+			.numbersMode {
+				margin-bottom: -0.1rem;
+			}
+		}
+	}
+	//top focus
+	&.focus {
+		color: var(--sub-color) !important;
+
+		.result {
+			opacity: 0 !important;
+		}
+
+		.icon svg path {
+			fill: var(--sub-color) !important;
+		}
+
+		.logo .text {
+			color: var(--sub-color) !important;
+			// opacity: 0 !important;
+		}
+
+		.logo .top {
+			opacity: 0 !important;
+		}
+
+		.config {
+			opacity: 0 !important;
+		}
+	}
+}

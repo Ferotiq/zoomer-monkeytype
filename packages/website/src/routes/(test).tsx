@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import styles from "./test.module.scss";
+import { Page } from "~/components/page";
 
 // export function routeData(): Resource<User | undefined> {
 // 	return useUser();
@@ -12,18 +12,19 @@ const Test: Component = () => {
 	// );
 
 	return (
-		<main>
-			<h1 class={styles.thing}>Some text</h1>
-			{/* <h1 class="font-bold text-3xl">Hello {user()?.username}</h1>
+		<Page>
+			<main class="page">thing</main>
+		</Page>
+	);
+
+	/* <h1 class="font-bold text-3xl">Hello {user()?.username}</h1>
 			<h3 class="font-bold text-xl">Message board</h3>
 			<button onClick={() => refetchRouteData}>Refresh</button>
 			<Form>
 				<button name="logout" type="submit">
 					Logout
 				</button>
-			</Form> */}
-		</main>
-	);
+			</Form> */
 };
 
 export default Test;
