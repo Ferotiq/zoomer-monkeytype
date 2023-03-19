@@ -5,7 +5,7 @@ function notFound({ request }: APIEvent): MonkeyResponse<string> {
 	const endpoint = request.url.replace(/^.+\/api\//, "/api/");
 
 	return new MonkeyResponse({
-		message: `Unknown API endpoint (${request.method} ${endpoint})`,
+		message: `Unknown API endpoint (${request.method}: ${endpoint})`,
 		status: 404,
 	});
 }
