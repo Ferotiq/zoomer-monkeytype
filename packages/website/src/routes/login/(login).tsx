@@ -8,6 +8,7 @@ import {
 } from "solid-start/server";
 import { prisma } from "~/db";
 import { createUserSession, getUser, login, register } from "~/db/session";
+import styles from "./login.module.scss";
 
 function validateUsername(username: unknown): string | undefined {
 	if (typeof username !== "string" || username.length < 3) {
@@ -23,7 +24,7 @@ function validatePassword(password: unknown): string | undefined {
 
 export function routeData(): Resource<object | undefined> {
 	return createServerData$(async (_, { request }) => {
-		if ((await getUser(request)) != null) {
+		if ((await getUser(request)) !== null) {
 			throw redirect("/");
 		}
 		return {};
@@ -60,7 +61,7 @@ const Login: Component = () => {
 		switch (loginType) {
 			case "login": {
 				const user = await login({ username, password });
-				if (user == null) {
+				if (user === null) {
 					throw new FormError(`Username/Password combination is incorrect`, {
 						fields,
 					});
@@ -71,13 +72,13 @@ const Login: Component = () => {
 				const userExists = await prisma.user.findUnique({
 					where: { username },
 				});
-				if (userExists != null) {
+				if (userExists !== null) {
 					throw new FormError(`User with username ${username} already exists`, {
 						fields,
 					});
 				}
 				const user = await register({ username, password });
-				if (user == null) {
+				if (user === null) {
 					throw new FormError(
 						`Something went wrong trying to create a new user.`,
 						{
@@ -94,44 +95,68 @@ const Login: Component = () => {
 	});
 
 	return (
-		<main>
-			<h1>Login</h1>
-			<Form>
+		<main class={styles.page}>
+			<h1 class={styles.heading}>Login</h1>
+			<Form class={styles.form}>
 				<input
+					class={styles.input}
 					type="hidden"
 					name="redirectTo"
 					value={params.redirectTo ?? "/"}
 				/>
-				<fieldset>
+				<fieldset class={styles["login-type"]}>
 					<legend>Login or Register?</legend>
 					<label>
-						<input type="radio" name="loginType" value="login" checked={true} />{" "}
+						<input
+							class={styles.input}
+							type="radio"
+							name="loginType"
+							value="login"
+							checked={true}
+						/>{" "}
 						Login
 					</label>
 					<label>
-						<input type="radio" name="loginType" value="register" /> Register
+						<input
+							class={styles.input}
+							type="radio"
+							name="loginType"
+							value="register"
+						/>{" "}
+						Register
 					</label>
 				</fieldset>
 				<div>
 					<label for="username-input">Username</label>
-					<input name="username" placeholder="kody" />
+					<input class={styles.input} name="username" placeholder="kody" />
 				</div>
 				<Show when={loggingIn.error?.fieldErrors?.username}>
-					<p role="alert">{loggingIn.error.fieldErrors.username}</p>
+					<p class={styles.alert} role="alert">
+						{loggingIn.error.fieldErrors.username}
+					</p>
 				</Show>
 				<div>
 					<label for="password-input">Password</label>
-					<input name="password" type="password" placeholder="twixrox" />
+					<input
+						class={styles.input}
+						name="password"
+						type="password"
+						placeholder="twixrox"
+					/>
 				</div>
 				<Show when={loggingIn.error?.fieldErrors?.password}>
-					<p role="alert">{loggingIn.error.fieldErrors.password}</p>
+					<p class={styles.alert} role="alert">
+						{loggingIn.error.fieldErrors.password}
+					</p>
 				</Show>
 				<Show when={loggingIn.error}>
-					<p role="alert" id="error-message">
+					<p class={styles.alert} role="alert" id="error-message">
 						{loggingIn.error.message}
 					</p>
 				</Show>
-				<button type="submit">{data() != null ? "Login" : ""}</button>
+				<button class={styles.submit} type="submit">
+					{data() !== null ? "Login" : ""}
+				</button>
 			</Form>
 		</main>
 	);
