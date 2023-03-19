@@ -1,5 +1,5 @@
 // @refresh reload
-import { Suspense, type JSX } from "solid-js";
+import { Show, Suspense, type JSX } from "solid-js";
 import {
 	Body,
 	ErrorBoundary,
@@ -23,7 +23,9 @@ export default function Root(): JSX.Element {
 				<Meta charset="utf-8" />
 				<Meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Link rel="icon" href="/images/favicon/favicon.ico" />
-				<Link rel="stylesheet" href={`/themes/${theme()}.css`} />
+				<Show when={theme() !== "custom"}>
+					<Link rel="stylesheet" href={`/themes/${theme()}.css`} />
+				</Show>
 			</Head>
 			<Body>
 				<ErrorBoundary>
