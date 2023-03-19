@@ -13,6 +13,7 @@ import {
 	Title,
 } from "solid-start";
 import "./root.scss";
+import { theme } from "./state/theme";
 
 export default function Root(): JSX.Element {
 	return (
@@ -22,6 +23,7 @@ export default function Root(): JSX.Element {
 				<Meta charset="utf-8" />
 				<Meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Link rel="icon" href="/images/favicon/favicon.ico" />
+				<Link rel="stylesheet" href={`/themes/${theme()}.css`} />
 			</Head>
 			<Body>
 				<ErrorBoundary>
