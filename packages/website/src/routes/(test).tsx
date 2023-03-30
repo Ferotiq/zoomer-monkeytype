@@ -1,5 +1,6 @@
 import type { Component } from "solid-js";
 import { Page } from "~/components/page";
+import styles from "./test.module.scss";
 
 // export function routeData(): Resource<User | undefined> {
 // 	return useUser();
@@ -13,7 +14,7 @@ const Test: Component = () => {
 
 	return (
 		<Page>
-			<main class="page">thing</main>
+			<main class={styles.page}>thing</main>
 		</Page>
 	);
 
