@@ -1,5 +1,5 @@
-import type { Component } from "solid-js";
+import type { JSX } from "solid-js";
 
-export const Bottom: Component = () => {
+export function Bottom(): JSX.Element {
 	return <div id="bottom" />;
-};
+}

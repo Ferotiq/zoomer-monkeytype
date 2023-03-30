@@ -1,11 +1,11 @@
-import type { Component, JSX } from "solid-js";
+import type { JSX } from "solid-js";
 import { Bottom } from "../bottom";
 import { Middle } from "../middle";
 import { Top } from "../top";
 
 type PageProps = JSX.HTMLAttributes<HTMLDivElement>;
 
-export const Page: Component<PageProps> = (props) => {
+export function Page(props: PageProps): JSX.Element {
 	return (
 		<>
 			<Top />
@@ -13,4 +13,4 @@ export const Page: Component<PageProps> = (props) => {
 			<Bottom />
 		</>
 	);
-};
+}
