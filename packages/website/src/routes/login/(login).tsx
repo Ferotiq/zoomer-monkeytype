@@ -1,4 +1,4 @@
-import { Show, type Component, type Resource } from "solid-js";
+import { Show, type JSX, type Resource } from "solid-js";
 import { useParams, useRouteData } from "solid-start";
 import { FormError } from "solid-start/data";
 import {
@@ -32,7 +32,7 @@ export function routeData(): Resource<object | undefined> {
 	});
 }
 
-const Login: Component = () => {
+export default function Login(): JSX.Element {
 	const data = useRouteData<typeof routeData>();
 	const params = useParams();
 
@@ -163,6 +163,4 @@ const Login: Component = () => {
 			</main>
 		</Page>
 	);
-};
-
-export default Login;
+}

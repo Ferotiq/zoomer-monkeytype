@@ -1,11 +1,9 @@
-import type { Component } from "solid-js";
+import type { JSX } from "solid-js";
 
-const NotFound: Component = () => {
+export default function NotFound(): JSX.Element {
 	return (
 		<main class="w-full p-4 space-y-2">
 			<h1 class="font-bold text-xl">Page Not Found</h1>
 		</main>
 	);
 };
-
-export default NotFound;

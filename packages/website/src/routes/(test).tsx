@@ -1,4 +1,4 @@
-import type { Component } from "solid-js";
+import type { JSX } from "solid-js";
 import { Page } from "~/components/page";
 import styles from "./test.module.scss";
 
@@ -6,7 +6,7 @@ import styles from "./test.module.scss";
 // 	return useUser();
 // }
 
-const Test: Component = () => {
+export function Test(): JSX.Element {
 	// const user = useRouteData<typeof routeData>();
 	// const [, { Form }] = createServerAction$((f: FormData, { request }) =>
 	// 	logout(request)
@@ -26,6 +26,6 @@ const Test: Component = () => {
 					Logout
 				</button>
 			</Form> */
-};
+}
 
 export default Test;
