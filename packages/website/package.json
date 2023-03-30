@@ -10,19 +10,20 @@
 		"pretty": "prettier --check \"**/*.{ts,json}\"",
 		"pretty-fix": "prettier --write \"**/*.{ts,json}\""
 	},
+	"dependencies": {
+		"@prisma/client": "^4.11.0",
+		"@solidjs/meta": "^0.28.2",
+		"@solidjs/router": "^0.8.0",
+		"solid-icons": "^1.0.4",
+		"solid-js": "^1.6.15",
+		"solid-start": "^0.2.23",
+		"undici": "^5.21.0",
+		"utils": "workspace:^"
+	},
 	"devDependencies": {
 		"sass": "^1.59.3",
 		"solid-start-node": "^0.2.23",
 		"typescript": "^5.0.2",
 		"vite": "^4.2.0"
-	},
-	"dependencies": {
-		"@prisma/client": "^4.11.0",
-		"@solidjs/meta": "^0.28.2",
-		"@solidjs/router": "^0.8.0",
-		"solid-js": "^1.6.15",
-		"solid-start": "^0.2.23",
-		"undici": "^5.21.0",
-		"utils": "workspace:^"
 	}
 }
