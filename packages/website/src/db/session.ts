@@ -27,7 +27,9 @@ export async function login({
 	}
 
 	const isCorrectPassword = password === user.password;
-	if (!isCorrectPassword) return null;
+	if (!isCorrectPassword) {
+		return null;
+	}
 
 	return user;
 }

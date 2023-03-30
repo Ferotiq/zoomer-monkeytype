@@ -3,7 +3,7 @@ import type { JSX } from "solid-js";
 import { Page } from "~/components/page";
 import styles from "./test.module.scss";
 
-// export function routeData(): Resource<User | undefined> {
+// export function routeData(): Resource<User | null> {
 // 	return useUser();
 // }
 

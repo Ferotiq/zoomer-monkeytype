@@ -23,7 +23,7 @@
 		"eqeqeq": ["error", "always"],
 		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"linebreak-style": ["error", "unix"],
-		"curly": ["error", "multi-line"],
+		"curly": ["error", "all"],
 		"quotes": [
 			"error",
 			"double",

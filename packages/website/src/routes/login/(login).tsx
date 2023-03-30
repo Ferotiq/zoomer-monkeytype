@@ -11,16 +11,20 @@ import { prisma } from "~/db";
 import { createUserSession, getUser, login, register } from "~/db/session";
 import styles from "./login.module.scss";
 
-function validateUsername(username: unknown): string | undefined {
+function validateUsername(username: unknown): string | null {
 	if (typeof username !== "string" || username.length < 3) {
 		return `Usernames must be at least 3 characters long`;
 	}
+
+	return null;
 }
 
-function validatePassword(password: unknown): string | undefined {
+function validatePassword(password: unknown): string | null {
 	if (typeof password !== "string" || password.length < 6) {
 		return `Passwords must be at least 6 characters long`;
 	}
+
+	return null;
 }
 
 export function routeData(): Resource<object | undefined> {
