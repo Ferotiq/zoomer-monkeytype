@@ -7,7 +7,7 @@ interface ButtonProps extends JSX.HTMLAttributes<HTMLDivElement> {
 
 export function Button(props: ButtonProps): JSX.Element {
 	return (
-		<div {...props} class={styles.button}>
+		<div {...props} classList={{ ...props.classList, [styles.button]: true }}>
 			{props.children}
 		</div>
 	);
