@@ -1,10 +1,8 @@
 import type { JSX } from "solid-js";
+import type { ButtonStateProps } from "../props";
 import styles from "./button.module.scss";
 
-interface ButtonProps extends JSX.HTMLAttributes<HTMLDivElement> {
-	disabled?: boolean;
-	active?: boolean;
-}
+type ButtonProps = JSX.HTMLAttributes<HTMLDivElement> & ButtonStateProps;
 
 export function Button(props: ButtonProps): JSX.Element {
 	return (
