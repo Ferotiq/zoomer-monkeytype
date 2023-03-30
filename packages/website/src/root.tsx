@@ -12,7 +12,7 @@ import {
 	Scripts,
 	Title,
 } from "solid-start";
-import "./root.scss";
+import styles from "./root.module.scss";
 import { theme } from "./state/theme";
 
 export default function Root(): JSX.Element {
@@ -85,7 +85,7 @@ export default function Root(): JSX.Element {
 				<Meta name="darkreader-lock" />
 				<Meta http-equiv="Cache-Control" content="no-store" />
 			</Head>
-			<Body>
+			<Body class={styles.body}>
 				<ErrorBoundary>
 					<Suspense fallback={<div>Loading</div>}>
 						<Routes>

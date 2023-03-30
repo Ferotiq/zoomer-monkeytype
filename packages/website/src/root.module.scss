@@ -17,7 +17,7 @@
 	color: var(--sub-alt-color);
 }
 
-body {
+.body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
@@ -55,25 +55,7 @@ body {
 	}
 }
 
-main {
-	display: grid;
-	grid-template-columns: auto minmax(0, 1000px) auto;
-	justify-items: center;
-	&.wide125 {
-		grid-template-columns: auto minmax(0, 1250px) auto;
-	}
-	&.wide150 {
-		grid-template-columns: auto minmax(0, 1500px) auto;
-	}
-	&.wide200 {
-		grid-template-columns: auto minmax(0, 2000px) auto;
-	}
-	&.widemax {
-		grid-template-columns: auto minmax(0, 1fr) auto;
-	}
-}
-
-#nocss {
+.nocss {
 	display: none !important;
 	pointer-events: none;
 }

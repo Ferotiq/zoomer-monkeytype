@@ -1,4 +1,3 @@
-import { FaSolidKeyboard } from "solid-icons/fa";
 import type { JSX } from "solid-js";
 import { Page } from "~/components/page";
 import styles from "./test.module.scss";
@@ -13,11 +12,7 @@ export function Test(): JSX.Element {
 	// 	logout(request)
 	// );
 
-	return (
-		<Page class={styles.page}>
-			<FaSolidKeyboard />
-		</Page>
-	);
+	return <Page class={styles.page}>content</Page>;
 
 	/* <h1 class="font-bold text-3xl">Hello {user()?.username}</h1>
 			<h3 class="font-bold text-xl">Message board</h3>
