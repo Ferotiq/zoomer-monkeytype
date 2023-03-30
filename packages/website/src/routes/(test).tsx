@@ -14,10 +14,8 @@ export function Test(): JSX.Element {
 	// );
 
 	return (
-		<Page>
-			<main class={styles.page}>
-				<FaSolidKeyboard />
-			</main>
+		<Page class={styles.page}>
+			<FaSolidKeyboard />
 		</Page>
 	);
 
