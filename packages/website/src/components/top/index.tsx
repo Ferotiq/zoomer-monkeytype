@@ -1,6 +1,6 @@
 import type { JSX } from "solid-js";
 import { useNavigate } from "solid-start";
-import styles from "./index.module.scss";
+import styles from "./top.module.scss";
 
 export function Top(): JSX.Element {
 	const navigate = useNavigate();

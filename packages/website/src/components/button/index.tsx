@@ -1,5 +1,5 @@
 import type { JSX } from "solid-js";
-import styles from "./index.module.scss";
+import styles from "./button.module.scss";
 
 interface ButtonProps {
 	children: JSX.Element;

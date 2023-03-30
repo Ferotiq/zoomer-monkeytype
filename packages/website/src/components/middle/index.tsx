@@ -1,5 +1,5 @@
 import type { JSX } from "solid-js";
-import styles from "./index.module.scss";
+import styles from "./middle.module.scss";
 
 type MiddleProps = JSX.HTMLAttributes<HTMLDivElement>;
 
