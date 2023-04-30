@@ -8,8 +8,8 @@
 	"private": true,
 	"engineStrict": true,
 	"engines": {
-		"node": "18.15.0",
-		"pnpm": "8.1.0"
+		"node": "18.16.0",
+		"pnpm": "8.3.1"
 	},
 	"scripts": {
 		"start": "pnpm run -r --parallel start",
@@ -38,5 +38,5 @@
 		"prisma": "^4.11.0",
 		"typescript": "^5.0.2"
 	},
-	"packageManager": "pnpm@8.1.0"
+	"packageManager": "pnpm@8.3.1"
 }
