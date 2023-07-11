@@ -11,7 +11,7 @@
 		"pretty-fix": "prettier --write \"**/*.{ts,json}\""
 	},
 	"dependencies": {
-		"@prisma/client": "^4.11.0",
+		"@prisma/client": "^5.0.0",
 		"@solidjs/meta": "^0.28.2",
 		"@solidjs/router": "^0.8.0",
 		"solid-icons": "^1.0.4",
