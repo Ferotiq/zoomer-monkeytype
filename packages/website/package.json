@@ -16,7 +16,7 @@
 		"@solidjs/router": "^0.8.0",
 		"solid-icons": "^1.0.4",
 		"solid-js": "^1.6.15",
-		"solid-start": "^0.2.23",
+		"solid-start": "^0.3.0",
 		"undici": "^5.21.0",
 		"utils": "workspace:^"
 	},
