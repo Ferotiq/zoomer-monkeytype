@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"sass": "^1.59.3",
-		"solid-start-node": "^0.2.23",
+		"solid-start-node": "^0.3.0",
 		"typescript": "^5.0.2",
 		"vite": "^4.2.0"
 	}
