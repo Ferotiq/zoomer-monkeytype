@@ -8,7 +8,7 @@
 	"private": true,
 	"engineStrict": true,
 	"engines": {
-		"node": "18.16.0",
+		"node": "18.20.0",
 		"pnpm": "8.3.1"
 	},
 	"scripts": {
